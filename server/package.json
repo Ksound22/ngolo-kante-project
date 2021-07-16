@@ -1,0 +1,26 @@
+{
+  "name": "ngolo-kante-project",
+  "version": "1.0.0",
+  "description": "Ngolo Kante Jokes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ksound22/ngolo-kante-project.git"
+  },
+  "keywords": [],
+  "author": "Kolade Chris Ksound",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ksound22/ngolo-kante-project/issues"
+  },
+  "homepage": "https://github.com/Ksound22/ngolo-kante-project#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  }
+}
