@@ -4,7 +4,7 @@ const TodoSchema = mongoose.Schema({
   joke: {
     type: String,
     required: [true, "Joke  is required"],
-    maxlength: [140, "Joke Name Cannot be More than 140 Characters"],
+    maxlength: [250, "Joke Name Cannot be More than 250 Characters"],
     trim: true,
   },
 
