@@ -1,5 +1,213 @@
+:root {
+  --link-color-1: #3498db;
+  --link-color-2: #13486b;
+  --bg-color-1: #f1eeee;
+  --bg-color-2: #ced8fc;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color-1);
+}
+
+a:hover {
+  color: var(--link-color-2);
+}
+
+/* Nav */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3.8rem;
+  border-bottom: 1px solid var(--bg-color-1);
+  box-shadow: 2px 2px 4px 0px var(--bg-color-2);
+  color: var(--link-color-1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kante-pic {
+  height: 80%;
+  width: 80%;
+}
+
+ul {
+  display: flex;
+  gap: 60px;
+}
+
+/* Joke Body */
+.joke-body {
+  max-width: 800px;
+  margin: 30px auto;
+  width: 90%;
+}
+
+.kante-bg {
+  opacity: 0.1;
+}
+
+.joke-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 2rem;
+  border: 1px solid var(--bg-color-2);
+  box-shadow: 2px 2px 4px 2px var(--bg-color-2);
+}
+
+.joke {
+  position: absolute;
+  top: 340px;
+  left: 70px;
+}
+
+.joke-btn {
+  position: absolute;
+  top: 420px;
+  left: 70px;
+  padding: 15px 0;
+  display: flex;
+  gap: 280px;
+}
+
+.btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: 0;
+  border: 1px solid green;
+  cursor: pointer;
+}
+
+.tweet-btn {
+  background-color: #3498db;
+}
+
+.tweet-btn:hover {
+  background-color: #6fbaec;
+}
+
+.quote-btn {
+  background-color: #2ecc71;
+}
+
+.quote-btn:hover {
+  background-color: #4ae798;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.footer-items {
+  display: flex;
+  height: 15vh;
+  gap: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+ol li {
+  padding: 4px;
+}
+
+@media screen and (max-width: 650px) {
+  nav {
+    padding: 0rem 1.2rem;
+  }
+
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  .logo {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul {
+    gap: 20px;
+  }
+
+  .kante-bg {
+    width: 90%;
+  }
+
+  .joke {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+  }
+
+  .joke-btn {
+    position: absolute;
+    top: 280px;
+    left: 20px;
+    gap: 80px;
+  }
+
+  .footer {
+    margin-top: 70px;
+    padding: 60px;
+  }
+
+  .footer-items {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav {
+    padding: 0rem 1.2rem;
+  }
+
+  nav h1 {
+    font-size: 0.6rem;
+    font-weight: 900;
+  }
+
+  ul li {
+    font-size: 0.7rem;
+  }
+
+  .joke {
+    top: 110px;
+  }
+
+  .joke-btn {
+    top: 201px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    padding: 99px 20px;
+  }
+
+  .footer-items {
+    gap: 20px;
+  }
 }

@@ -1,40 +1,56 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import SubmitJoke from "./SubmitJoke";
 import { FaTwitter, FaRandom } from "react-icons/fa";
 
-import KantePic from "../images/Kanteinaction.png";
 import KantePic2 from "../images/p116594.png";
 
+const api = `${process.env.REACT_APP_API}/api/v1/jokes`;
+
 const JokeBody = () => {
-  const [joke, setJoke] = useState(
-    "70% of the earth is covered by water, the rest is covered by N'golo Kante"
-  );
+  const [joke, setJoke] = useState("");
+  const [author, setAuthor] = useState("");
 
   // Call Jokes API
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API}/api/v1/jokes`)
-      .then((res) => res.json())
-      .then((data) => {
-        setJoke(data.joke);
-        console.log(data);
-      })
-      .catch((err) => console.log(err));
+    fetchJokes();
   }, []);
 
+  const fetchJokes = async () => {
+    try {
+      const res = await fetch(api);
+      const { jokes } = await res.json();
+
+      // Get random jokes
+      let randomNum = Math.floor(Math.random() * jokes.length);
+      let randomJoke = jokes[randomNum];
+
+      setJoke(randomJoke.joke);
+      setAuthor(randomJoke.author);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleClick = () => {
+    fetchJokes();
+  };
+
   return (
-    <section className="joke">
-      <p>This is the Joke body</p>
-      <div className="joke-item">{joke}</div>
+    <section className="joke-body">
       <div className="joke-container">
         <img src={KantePic2} alt="Kante-in-action" className="kante-bg" />
         <br />
-        <button className="btn tweet-btn">
-          <FaTwitter className="Twitter" />
-        </button>
-        <button className="btn quote-btn">
-          <FaRandom className="quote" />
-        </button>
+        <div className="joke">
+          <p className="joke-item">{joke}</p>
+          <p className="joke-author"> – {author}</p>
+        </div>
+        <div className="joke-btn">
+          <button className="btn tweet-btn">
+            <FaTwitter className="twitter" /> Tweet
+          </button>
+          <button onClick={handleClick} className="btn quote-btn">
+            <FaRandom className="quote" /> New Joke
+          </button>
+        </div>
       </div>
     </section>
   );

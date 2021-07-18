@@ -4,6 +4,8 @@ import { Switch, Route } from "react-router-dom";
 import API from "./components/API";
 import Contact from "./components/Contact";
 
+import "./App.css";
+
 function App() {
   return (
     <div>
