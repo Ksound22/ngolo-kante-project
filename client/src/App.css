@@ -98,10 +98,12 @@ ul {
 
 .tweet-btn {
   background-color: #3498db;
+  color: black;
 }
 
 .tweet-btn:hover {
   background-color: #6fbaec;
+  color: black;
 }
 
 .quote-btn {
@@ -127,6 +129,14 @@ ul {
 
 ol li {
   padding: 4px;
+}
+
+.submit-text {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 650px) {
@@ -180,34 +190,67 @@ ol li {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   nav {
     padding: 0rem 1.2rem;
   }
 
   nav h1 {
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 900;
   }
 
   ul li {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .joke {
-    top: 110px;
+    top: 75px;
+    left: 13px;
   }
 
   .joke-btn {
-    top: 201px;
+    top: 192px;
   }
 
   .footer {
-    margin-top: 40px;
-    padding: 99px 20px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 118px 30px;
   }
 
   .footer-items {
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .joke-container {
+    position: relative;
+    top: 30px;
+  }
+
+  .footer {
+    margin-top: 103px;
+    padding: 129px 30px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  nav h1 {
+    font-size: 0.5rem;
+    font-weight: 900;
+  }
+
+  ul li {
+    font-size: 0.6rem;
+  }
+  .joke {
+    top: 35px;
+  }
+
+  .joke-btn {
+    top: 141px;
   }
 }

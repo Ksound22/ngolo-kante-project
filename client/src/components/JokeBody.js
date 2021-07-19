@@ -34,6 +34,8 @@ const JokeBody = () => {
     fetchJokes();
   };
 
+  let tweetURL = `https://twitter.com/intent/tweet?text=${joke} - ${author}`;
+
   return (
     <section className="joke-body">
       <div className="joke-container">
@@ -44,11 +46,11 @@ const JokeBody = () => {
           <p className="joke-author"> – {author}</p>
         </div>
         <div className="joke-btn">
-          <button className="btn tweet-btn">
+          <a className="btn tweet-btn" href={tweetURL} target="_blank">
             <FaTwitter className="twitter" /> Tweet
-          </button>
+          </a>
           <button onClick={handleClick} className="btn quote-btn">
-            <FaRandom className="quote" /> New Joke
+            <FaRandom className="quote" /> New Fact
           </button>
         </div>
       </div>

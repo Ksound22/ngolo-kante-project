@@ -12,15 +12,15 @@ const Nav = () => {
             <img src={KanteHead} alt="N'golo Kante" className="kante-pic" />
           </NavLink>
           <NavLink to="/">
-            <h1 className="logo-text">KANTE JOKES</h1>
+            <h1 className="logo-text">KANTE FACTS</h1>
           </NavLink>
         </div>
         <ul>
           <li>
-            <NavLink to="/">Random Joke</NavLink>
+            <NavLink to="/">Random Fact</NavLink>
           </li>
           <li>
-            <NavLink to="/submitjoke">Submit Joke</NavLink>
+            <NavLink to="/submitjoke">Submit Fact</NavLink>
           </li>
         </ul>
       </nav>

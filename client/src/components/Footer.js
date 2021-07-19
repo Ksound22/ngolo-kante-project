@@ -6,21 +6,19 @@ const Footer = () => {
     <section className="footer">
       <div className="footer-items">
         <p>
-          Made with the MERN Stack by Kolade Chris Ksound <br /> A web developer
-          focusing on frontend technologies and passionate Chelsea FC supporter.
+          Made with the MERN Stack by Kolade Chris Ksound. <br /> A web
+          developer focusing on frontend technologies and passionate Chelsea FC
+          supporter. <br /> Dedicated to N'golo Kante.
         </p>
         <ol>
           <li>
-            <Link to="/api">API</Link>
+            <Link to="/">Random Fact</Link>
           </li>
           <li>
-            <Link to="/contact">Contact Developer</Link>
+            <Link to="/submitjoke">Submit Fact</Link>
           </li>
           <li>
-            <Link to="/">Random Joke</Link>
-          </li>
-          <li>
-            <Link to="/submitjoke">Submit Joke</Link>
+            <a href="https://twitter.com/koladechris">Contact Developer</a>
           </li>
         </ol>
       </div>
