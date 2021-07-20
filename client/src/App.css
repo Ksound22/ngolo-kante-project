@@ -243,6 +243,14 @@ ol li {
     margin-top: 103px;
     padding: 129px 30px;
   }
+
+  .joke {
+    top: 55px;
+  }
+
+  .joke-btn {
+    top: 181px;
+  }
 }
 
 @media screen and (max-width: 321px) {
