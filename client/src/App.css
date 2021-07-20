@@ -52,11 +52,6 @@ ul {
   gap: 40px;
 }
 
-.burger {
-  display: none;
-  font-size: 1.5rem;
-}
-
 /* Joke Body */
 .joke-body {
   max-width: 800px;
@@ -76,6 +71,10 @@ ul {
   padding: 0 2rem;
   border: 1px solid var(--bg-color-2);
   box-shadow: 2px 2px 4px 2px var(--bg-color-2);
+}
+
+.joke-item {
+  margin-bottom: 6px;
 }
 
 .joke {
@@ -176,13 +175,13 @@ ol li {
 
   .joke {
     position: absolute;
-    top: 180px;
+    top: 160px;
     left: 20px;
   }
 
   .joke-btn {
     position: absolute;
-    top: 280px;
+    top: 265px;
     left: 20px;
     gap: 80px;
   }

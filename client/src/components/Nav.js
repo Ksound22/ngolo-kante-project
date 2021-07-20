@@ -16,7 +16,9 @@ const Nav = () => {
             <img src={KanteHead} alt="N'golo Kante" className="kante-pic" />
           </NavLink>
           <NavLink to="/">
-            <h1 className="logo-text">KANTE FACTS</h1>
+            <h1 className="logo-text">
+              KANTE <br /> FACTS
+            </h1>
           </NavLink>
         </div>
 

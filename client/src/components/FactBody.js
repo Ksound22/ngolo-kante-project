@@ -3,7 +3,7 @@ import { FaTwitter, FaRandom } from "react-icons/fa";
 
 import KantePic2 from "../images/p116594.png";
 
-const api = `/api/v1/jokes`;
+const api = `${process.env.REACT_APP_API}/api/v1/jokes` || `/api/v1/jokes`;
 
 const FactBody = () => {
   const [fact, setFact] = useState("");
