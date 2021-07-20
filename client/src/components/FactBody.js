@@ -5,7 +5,7 @@ import KantePic2 from "../images/p116594.png";
 
 const api = `${process.env.REACT_APP_API}/api/v1/jokes`;
 
-const JokeBody = () => {
+const FactBody = () => {
   const [joke, setJoke] = useState("");
   const [author, setAuthor] = useState("");
 
@@ -58,4 +58,4 @@ const JokeBody = () => {
   );
 };
 
-export default JokeBody;
+export default FactBody;

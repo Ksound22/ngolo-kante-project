@@ -1,15 +1,15 @@
 import Nav from "./Nav";
-import JokeBody from "./JokeBody";
+import FactBody from "./FactBody";
 import Footer from "./Footer";
 
-const Joke = () => {
+const Fact = () => {
   return (
     <div>
       <Nav />
-      <JokeBody />
+      <FactBody />
       <Footer />
     </div>
   );
 };
 
-export default Joke;
+export default Fact;

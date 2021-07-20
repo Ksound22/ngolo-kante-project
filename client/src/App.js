@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
-import Joke from "./components/Joke";
-import SubmitJoke from "./components/SubmitJoke";
+import Fact from "./components/Fact";
+import SubmitFact from "./components/SubmitFact";
 
 import "./App.css";
 
@@ -8,8 +8,8 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Joke} />
-        <Route exact path="/submitjoke" component={SubmitJoke} />
+        <Route exact path="/" component={Fact} />
+        <Route exact path="/submitfact" component={SubmitFact} />
       </Switch>
     </div>
   );

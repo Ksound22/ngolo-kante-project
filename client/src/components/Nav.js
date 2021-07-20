@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import KanteHead from "../images/kantehead.png";
 
 import { NavLink } from "react-router-dom";
+
+const handleClick = () => {
+  return window.location.reload();
+};
 
 const Nav = () => {
   return (
@@ -15,12 +19,15 @@ const Nav = () => {
             <h1 className="logo-text">KANTE FACTS</h1>
           </NavLink>
         </div>
+
         <ul>
           <li>
-            <NavLink to="/">Random Fact</NavLink>
+            <NavLink to="/" onClick={handleClick}>
+              Random Fact
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/submitjoke">Submit Fact</NavLink>
+            <NavLink to="/submitfact">Submit Fact</NavLink>
           </li>
         </ul>
       </nav>

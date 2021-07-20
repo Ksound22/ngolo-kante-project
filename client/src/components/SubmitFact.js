@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import Nav from "./Nav";
 
-const SubmitJoke = () => {
+const SubmitFact = () => {
   return (
     <div>
       <Nav />
@@ -17,4 +17,4 @@ const SubmitJoke = () => {
   );
 };
 
-export default SubmitJoke;
+export default SubmitFact;
