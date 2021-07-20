@@ -17,9 +17,9 @@ app.use(cors());
 
 dbConnection();
 
-app.get("/", (req, res) => {
-  res.send("Welcome to Ngolo Kante Facts");
-});
+// app.get("/", (req, res) => {
+//   res.send("Welcome to Ngolo Kante Facts");
+// });
 
 app.use("/api/v1", jokeRoutes);
 
