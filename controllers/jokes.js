@@ -1,6 +1,6 @@
 const Jokes = require("../models/Jokes");
 
-// Get all todos
+// Get all jokes
 const getJokes = async (req, res) => {
   try {
     const jokes = await Jokes.find({});
@@ -10,7 +10,7 @@ const getJokes = async (req, res) => {
   }
 };
 
-// Create todos
+// Create jokes
 const createJoke = async (req, res) => {
   try {
     const joke = await Jokes.create(req.body);
@@ -20,7 +20,7 @@ const createJoke = async (req, res) => {
   }
 };
 
-// Get single todo
+// Get single joke
 const getJoke = async (req, res) => {
   try {
     const joke = await Jokes.findById(req.params.id);
@@ -34,7 +34,7 @@ const getJoke = async (req, res) => {
   }
 };
 
-// Update todo
+// Update joke
 const updateJoke = async (req, res) => {
   try {
     const joke = await Jokes.findByIdAndUpdate(req.params.id, req.body, {

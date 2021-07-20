@@ -6,7 +6,7 @@ import KantePic2 from "../images/p116594.png";
 const api = `${process.env.REACT_APP_API}/api/v1/jokes`;
 
 const FactBody = () => {
-  const [joke, setJoke] = useState("");
+  const [fact, setFact] = useState("");
   const [author, setAuthor] = useState("");
 
   // Call Jokes API
@@ -19,11 +19,11 @@ const FactBody = () => {
       const res = await fetch(api);
       const { jokes } = await res.json();
 
-      // Get random jokes
+      // Get random jokes (facts)
       let randomNum = Math.floor(Math.random() * jokes.length);
       let randomJoke = jokes[randomNum];
 
-      setJoke(randomJoke.joke);
+      setFact(randomJoke.joke);
       setAuthor(randomJoke.author);
     } catch (error) {
       console.log(error);
@@ -34,15 +34,15 @@ const FactBody = () => {
     fetchJokes();
   };
 
-  let tweetURL = `https://twitter.com/intent/tweet?text=${joke} - ${author}`;
+  let tweetURL = `https://twitter.com/intent/tweet?text=${fact} - ${author}`;
 
   return (
     <section className="joke-body">
       <div className="joke-container">
-        <img src={KantePic2} alt="Kante-in-action" className="kante-bg" />
+        <img src={KantePic2} alt="Kante" className="kante-bg" />
         <br />
         <div className="joke">
-          <p className="joke-item">{joke}</p>
+          <p className="joke-item">{fact}</p>
           <p className="joke-author"> – {author}</p>
         </div>
         <div className="joke-btn">

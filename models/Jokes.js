@@ -10,7 +10,7 @@ const TodoSchema = mongoose.Schema({
 
   author: {
     type: String,
-    maxlength: [10, "Author's name canot be more than 10 characters"],
+    maxlength: [20, "Author's name canot be more than 10 characters"],
   },
 });
 
